@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Searched</title>
+</head>
+<body>
+<header>
+        <center>
+            <h1><strong>{{message}}</strong></h1>
+        </center>
+</header>
+<main>
+    <center><strong>
+        <table border="1x solid black">
+            <tr>
+                <th>Item_Id</th>
+                <th>Item_Name</th>
+                <th>Item_ExpireTime</th>
+                <th>Item_ManfacturingTime</th>
+                <th>ImagePath</th>
+                <th>Quantity</th>
+                <th>Category</th>
+                <th>is_expired</th>
+            </tr>
+            {% for item in data %}
+            <tr>
+                <td>{{item.id}}</td>
+                 <td>{{item.name}}</td>
+                 <td>{{item.extime}}</td>
+                <td>{{item.maftime}}</td>
+                <td>{{item.image}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.category}}</td>
+                <td>{{timezone}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </strong></center>
+    <form action="/" method="post">
+        <center>
+        <br><br><button>Back</button>
+    </center>
+    </form>
+
+</main>
+
+
+</body>
+</html>

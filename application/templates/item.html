@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Inventory Items</title>
+</head>
+<body>
+<header>
+
+</header>
+
+
+<main>
+<center>
+    <form action="/afterinsert" method="post" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>Inventory_Name:</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>Inventory_Category:</td>
+                <td><input type="text" name="category"></td>
+            </tr>
+            <tr>
+                <td>Expiry_Time:</td>
+                <td><input type="datetime-local" name="expirytime"></td>
+            </tr>
+            <tr>
+                <td>Quantity:</td>
+                <td><input type="number" name="quantity" min="0"></td>
+            </tr>
+
+            <tr>
+                <td>Manufacturing_Time:</td>
+                <td><input type="datetime-local" name="manufacturingtime"></td>
+            </tr>
+             <tr>
+                <td>Upload Image Here:</td>
+                 <td><input type="file" name="image"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="SUBMIT">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+</center>
+
+</main>
+
+
+<footer></footer>
+
+</body>
+</html>

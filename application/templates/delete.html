@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Items</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<header>
+    <strong>
+        <center>
+            <h1>
+            Delete Your Items Here!!
+            </h1>
+        </center>
+    </strong>
+</header>
+<main>
+     <center>
+    <div id="container"></div>
+
+        <table border="1x solid black">
+            <tr>
+                <th>Item Id</th>
+                <th>Item Name</th>
+                <th>DELETE</th>
+            </tr>
+            {% for item in data %}
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>
+                    <form action="/afterdelete" method='POST'>
+                        <input type=hidden value="{{item.id}}" name='id_to_delete' />
+                        <input type=submit  value="DELETE"/>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+         <form action="/" method="post">
+
+        <br><br><button>Back</button>
+         </form>
+     </center>
+</main>
+
+</body>
+</html>
