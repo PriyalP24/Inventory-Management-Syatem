@@ -8,7 +8,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelavent variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/home/mtech/PycharmProject/Inventory Management Syatem/venv"
+setenv VIRTUAL_ENV "/home/mtech/PycharmProject/Python/Assignment2/venv"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"

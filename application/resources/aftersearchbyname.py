@@ -10,9 +10,6 @@ from application.database.queries import SearchByName
 class After_SearchByName(Resource):
     def get(self):
         pass
-
-
-
     def post(self):
         data = request.form['itemname']
         timezone = request.form['timezone']

@@ -22,7 +22,7 @@ class After_Delete(Resource):
                 delete(connection, data)
                 import os
                 path = os.path.dirname(os.path.abspath(__file__))
-                path2 = "../statics/images/image" + str(data) + '.jpeg'
+                path2 = "../static/images/image" + str(data) + '.jpeg'
                 file = os.path.join(path, path2)
                 os.remove(file)
                 logger.debug("Images deleted successfully from local directory")

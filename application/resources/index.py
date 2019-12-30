@@ -1,6 +1,6 @@
 from flask_restful import *
 from flask import *
-from common.utils import *
+from application.common.utils import *
 
 class Index(Resource):
     def get(self):

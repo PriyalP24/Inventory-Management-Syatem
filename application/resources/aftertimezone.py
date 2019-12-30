@@ -19,12 +19,12 @@ class After_TimeZone(Resource):
 
         connection = con()
         time = time(time)
-        print(time)
+
         if connection:
             try:
                 result = SearchByCategory(connection, data)
                 return output_html(
-                    render_template('aftersearchbycategory.html', message="Items Searched  succesfully", time=time), 200)
+                    render_template('aftersearchbycategory.html', message="Items Searched  succesfully", result=result,time=time), 200)
             except Exception as e:
                 return output_html(render_template("error.html", error=str(e)), 200)
         else:

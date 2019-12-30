@@ -1,27 +1,25 @@
 from flask import *
 from flask_restful import Api
+from application.app import app
+from flask_swagger_ui import get_swaggerui_blueprint
 
 import logging
-from application.config import configure_app
+from application.config import Config
 
-app = Flask(__name__)
-api = Api(app,catch_all_404s=True)
+
 
 
 
 __all__ = ['create_app', 'app_init_task', 'ws_init']
 
 def create_app():
-    """Initialize Flask Application"""
     app = Flask(__name__)
-    configure_app(app)
+    Config(app)
     return app
 
 
 
-@app.errorhandler(404)
-def not_found(e):
-    return render_template("error.html")
+
 
 
 def init_task(api):
@@ -50,8 +48,7 @@ def init_task(api):
     api.add_resource(After_SearchByCategory, '/aftersearchbycategory')
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
 
 
 

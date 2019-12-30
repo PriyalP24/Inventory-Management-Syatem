@@ -4,9 +4,9 @@ import datetime
 import pytz
 
 path = os.path.dirname(os.path.abspath(__file__))
-print("path : ",path)
+
 UPLOAD_FOLDER = os.path.join(path, 'uploaded_files')
-print("Uploaded folder : ",UPLOAD_FOLDER)
+
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 
@@ -51,7 +51,7 @@ def time(time1,ex_time):
 def get_logger():
     import logging
     logger = logging.getLogger(__name__)
-    file_handler = logging.FileHandler("app/log/logfile.log")
+    file_handler = logging.FileHandler("application/log/logfile.log")
     formatter = logging.Formatter('%(asctime)s:%(name)s:%(message)s')
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)

@@ -32,7 +32,7 @@ end
 # unset irrelavent variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/mtech/PycharmProject/Inventory Management Syatem/venv"
+set -gx VIRTUAL_ENV "/home/mtech/PycharmProject/Python/Assignment2/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

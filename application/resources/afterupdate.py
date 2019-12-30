@@ -11,7 +11,7 @@ class After_Update(Resource):
         pass
     def post(self):
 
-        inventory_id=request.form['id']
+        inventory_id = request.form['id']
         quantity = request.form['quantity']
 
 

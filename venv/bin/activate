@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelavent variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/mtech/PycharmProject/Inventory Management Syatem/venv"
+VIRTUAL_ENV="/home/mtech/PycharmProject/Python/Assignment2/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

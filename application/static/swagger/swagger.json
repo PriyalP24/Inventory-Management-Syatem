@@ -1,0 +1,252 @@
+{
+  "info": {
+    "description": "Inventory_Management_System_Swagger_UI",
+    "version": "3.0.0",
+    "title": "Inventory_Management_System"
+  },
+  "tags": [
+    {
+      "name": "Inventory Request",
+      "description": "Example API for inserting , updating , deleting and searching inventory"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "Index Page"
+        ],
+        "summary": "Returns Index Page",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/item": {
+      "get": {
+        "tags": [
+          "Insert Page"
+        ],
+        "summary": "Returns Insert Page",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/afterinsert": {
+      "post": {
+        "tags": [
+          "After Insert Page"
+        ],
+        "summary": "Returns Page After Insertion",
+        "parameters": [{
+          "name": "name",
+          "type": "string",
+          "in" : "formData",
+          "description": "Name"
+        },
+          {
+            "name": "category",
+            "type": "string",
+            "in" : "formData",
+            "description": "Category"
+          },
+          {
+            "name": "expirytime",
+            "type": "string",
+            "in" : "formData",
+            "description": "Expiry Date"
+          },
+           {
+            "name": "quantity",
+            "type": "string",
+            "in" : "formData",
+            "description": "Quantity"
+          },
+           {
+            "name": "manufacturingtime",
+            "type": "string",
+            "in" : "formData",
+            "description": "Manufacturing Date"
+          },
+          {
+            "name": "image",
+            "type": "file",
+            "in" : "formData",
+            "description": "Image"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/searchbyname": {
+      "get": {
+        "tags": [
+          "Search By Name Page"
+        ],
+        "summary": "Returns Search By Name Page ",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/aftersearchbyname": {
+      "post": {
+        "tags": [
+          "After SearchByName Page"
+        ],
+        "summary": "Returns Page After Searching",
+        "parameters": [
+          {
+          "name": "itemname",
+          "type": "string",
+          "in" : "formData",
+          "description": "Item Name "
+          },
+          {
+            "name": "timezone",
+            "type": "string",
+            "in" : "formData",
+            "enum": ["Asia/Harbin","Asia/Hebron","Asia/Dushanbe","Asia/Ho_Chi_Minh"],
+            "description": "Timezone"
+
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/searchbycategory": {
+      "get": {
+        "tags": [
+          "SearchByCategory Page"
+        ],
+        "summary": "Returns SearchByCategory Page",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/aftersearchbycategory": {
+      "post": {
+        "tags": [
+          "After SearchByCategory Page"
+        ],
+        "summary": "Returns Page AfterSearchByCategory",
+        "parameters": [
+          {
+          "name": "itemcategory",
+          "type": "string",
+          "in" : "formData",
+          "description": "Category"
+          },
+          {
+            "name": "timezone",
+            "type": "string",
+            "in" : "formData",
+            "enum": ["Asia/Harbin","Asia/Hebron","Asia/Dushanbe","Asia/Ho_Chi_Minh"],
+            "description": "Timezone"
+
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/delete": {
+      "get": {
+        "tags": [
+          "Delete Page"
+        ],
+        "summary": "Returns Delete Page",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/afterdelete": {
+      "post": {
+        "tags": [
+          "After Delete Page"
+        ],
+        "summary": "Returns Page After Deletion",
+        "parameters": [
+          {
+            "name": "id_to_delete",
+            "type": "number",
+            "in": "formData",
+            "description": "Delete Item By Id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/update": {
+      "get": {
+        "tags": [
+          "Update Page"
+        ],
+        "summary": "Returns Update Page",
+
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/afterupdate": {
+      "post": {
+        "tags": [
+          "AfterUpdate Page"
+        ],
+        "summary": "Returns Page After Updation",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "number",
+            "in": "formData",
+            "description": "ID Of Item"
+          },
+          {
+            "name": "quantity",
+            "type": "number",
+            "in": "formData",
+            "description": "Quantity"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+
+  "swagger": "2.0"
+}

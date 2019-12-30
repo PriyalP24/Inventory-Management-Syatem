@@ -1,4 +1,4 @@
-#!"/home/mtech/PycharmProject/Inventory Management Syatem/venv/bin/python"
+#!/home/mtech/PycharmProject/Python/Assignment2/venv/bin/python
 # EASY-INSTALL-ENTRY-SCRIPT: 'pip==19.0.3','console_scripts','pip'
 __requires__ = 'pip==19.0.3'
 import re

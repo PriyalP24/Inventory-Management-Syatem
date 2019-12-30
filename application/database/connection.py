@@ -3,7 +3,7 @@ from flask import current_app
 import logging
 logger = logging.getLogger(__name__)
 
-file_handler = logging.FileHandler("log/logfile.log")
+file_handler = logging.FileHandler("application/log/logfile.log")
 formatter =logging.Formatter('%(asctime)s:%(name)s:%(message)s')
 file_handler.setFormatter(formatter)
 
